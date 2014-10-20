@@ -495,8 +495,41 @@ fieldset[disabled] .btn-custom-gray.active {
 	height: 500px;
 	background: url(../img/top-photo-l.jpg) no-repeat;
 }
-
-
+.small-title {
+	color: #4E4E50;
+	font-size: 24px;
+	padding: 5px;
+}
+.demo-start {
+	margin-top: 30px;
+}
+.demo-panel {
+	background: #fff;
+	margin-top: 20px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	border-radius: 3px;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+}
+.demo-panel-title {
+	padding: 10px 20px;
+	background: #05ABB1;
+	margin: 0 -15px;
+	border-radius: 3px 3px 0 0;
+	color: #fff;
+	font-size: 22px;
+}
+.demo-panel-image {
+	padding-top: 30px;
+	text-align: center;
+	margin: 0 -15px;
+	background: url(../img/demo-panel-bg.png) repeat-x bottom left;
+	margin-bottom: 20px;
+}
+.demo-panel-txt {
+	color: #727a80;
+	margin-bottom: 20px;
+}
 
 .mobile-login-form {
 	margin-top: 30px;
