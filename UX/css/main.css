@@ -166,3 +166,8 @@ ul, ol {
 	font-weight: bold;
 	margin-bottom: 10px;
 }
+#info-box{
+	float: left;
+	width:30%;
+	padding:5px;
+}
