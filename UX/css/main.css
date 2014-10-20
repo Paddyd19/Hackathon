@@ -503,6 +503,22 @@ fieldset[disabled] .btn-custom-gray.active {
 .demo-start {
 	margin-top: 30px;
 }
+.green-small-title {
+    	padding: 10px 20px;
+	background: #8dc24b;
+	margin: 0 -15px;
+	border-radius: 3px 3px 0 0;
+	color: #fff;
+	font-size: 22px;
+}
+.orange-small-title {
+    	padding: 10px 20px;
+	background: #eb9400;
+	margin: 0 -15px;
+	border-radius: 3px 3px 0 0;
+	color: #fff;
+	font-size: 22px;
+}
 .demo-panel {
 	background: #fff;
 	margin-top: 20px;
