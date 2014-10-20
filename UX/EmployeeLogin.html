@@ -59,7 +59,7 @@
                             <a href="#">Forgot your login details?</a>
                         </div>
                         <div class="lp-buttons-container login-button text-right">
-                            <button type="submit" class="big-primary-button">Sign In</button>
+                            <button type="submit" id="loginSubmitBtn"class="big-primary-button">Sign In</button>
                         </div>
                     </div>
                 </div>
@@ -176,5 +176,12 @@
 <script src="js/lib/jQuery.dPassword.js"></script>
 <script src="js/calculator.js"></script>
 <script src="js/app.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#loginSubmitBtn').click(function () {
+			window.location.href='\Employee.html';
+		});
+	});
+</script>
 </body>
 </html>
