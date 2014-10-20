@@ -1,0 +1,60 @@
+/*Desktop*/
+
+#headerEmployerBranded {
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+	color: #333;
+	min-height: 116px;
+}
+#headerEmployerBranded .user-nav a {
+	color: #333;
+}
+#headerEmployerBranded #page-title {
+	color: #727A80;
+	border-left: 2px solid #727A80;
+	margin-top: 50px;
+    line-height: 1;
+    padding-top: 2px;
+}
+#headerEmployerBranded #logo {
+	margin-top: 44px;
+	margin-left: 50px;
+}
+#headerEmployerBranded #employerLogo {
+	margin-left: 50px;
+	margin-top: 20px;
+}
+#headerEmployerBranded .top-menu {
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+}
+
+/*Mobile*/
+#headerEmployerBrandedMobile {
+	background: #fff;
+	color: #333;
+}
+#headerEmployerBrandedMobile .m-menu-icon, #headerEmployerBrandedMobile #page-title {
+	color: #727A80;
+}
+#headerEmployerBrandedMobile #page-title {
+	border-left: 2px solid #727A80;
+    line-height: 1;
+    padding-top: 3px;
+    margin-top: 14px;
+}
+#employerLogoMobile img {
+	height: 29px;
+	margin-right: 15px;
+	max-width: 70px;
+}
+#unumLogoMobile {
+	margin-top: 10px!important;
+	display: inline-block;
+}
+
+.nav-tabs > li > a {
+    background: none;
+}

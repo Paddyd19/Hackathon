@@ -1,0 +1,47 @@
+﻿/*.sTable tbody {
+    display: block;
+    overflow-y: scroll;
+    width: 100%;
+    height: 420px;
+}*/
+
+.sTable thead {
+    display: table;
+    width: 100%;
+}
+
+.sTable .left {
+    width: 40%;
+}
+
+.sTable .center {
+    width: 15%;
+}
+
+.sTable .right {
+    width: 45%;
+}
+
+.sTable .oneFifth {
+    width: 20%;
+}
+
+.sTable th {
+    background: #535C70;
+    padding: 10px 20px;
+}
+
+.sTable tr {
+    display: table-row;
+}
+
+.sTable tbody tr {
+    display: table;
+    width: 100%;
+}
+
+.emptyTbody {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    text-align: center;
+}

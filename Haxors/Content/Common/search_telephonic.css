@@ -1,0 +1,193 @@
+.case-summary {
+	height: 100%;
+	padding-bottom: 0 !important;
+	padding-top: 80px;
+	margin-top: -80px;
+}
+.case-summary .content-left {
+	background: #393F4F;
+	height: 100%;
+	padding-top: 20px;
+}
+.content-left .button-edit {
+	margin-left: 0;
+}
+.case-summary .content-right {
+	padding-top: 20px;
+}
+.left-block-title {
+	font-weight: bold;
+	padding: 9px 15px;
+	background: #535C70;
+	margin: 15px -15px 15px;
+}
+.left-block-title .fa {
+	margin-right: 10px;
+}
+.left-block-content {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.left-block-content table {
+	width: 100%;
+}
+.left-block-content table .radio {
+	margin-top: 0;
+}
+.left-block-content label {
+	float: left;
+	margin-right: 20px;
+}
+.left-block-content table td {
+	vertical-align: top;
+	padding: 5px 10px 5px 0;
+	word-break: break-all;
+}
+.left-block-content td.cs-cell-title {
+	width: 40%;
+	padding-right: 20px;
+	word-break: inherit;
+}
+.left-block-content p {
+	margin-bottom: 25px;
+}
+.company-search-form-container{
+	overflow: hidden;
+}
+.employee-search-form {
+	margin-bottom: 10px;
+	display: table;
+	width: 100%;
+}
+.search-company-field, .search-employee-field, .search-employee-status-field {
+	font-size: 15px;
+	background: none;
+	color: #fff;
+	padding: 7px;
+	border: 1px solid #505663;
+	margin-right: 5px;
+	width: 200px;
+	height: 36px;
+}
+.search-company-field.active {
+	border: 1px solid #6E9642;
+}
+.search-employee-status-field {
+	cursor: default;
+}
+.search-company-field-id {
+	width: 110px;
+}
+.search-employee-field {
+	color: #777;
+	width: 120px;
+}
+.company-search-form {
+	/*margin-bottom: 10px;*/
+	overflow: hidden;
+}
+.employee-search-form .simple-gray {
+	color: #232B38;
+	background: #565C69;
+}
+.employee-search-form  .page-title {
+	color: #5F656E;
+}
+.employee-search-form .page-title {
+	margin-bottom: 0;
+}
+.search-employee-status-field {
+	position: relative;
+	width: 150px;
+	padding-right: 30px;
+	border-color: #505663;
+	color: #555;
+}
+.status-dropdown-icon {
+	position: absolute;
+	right: -1px;
+	top: -1px;
+	bottom: -1px;
+	background: #565C69;
+	color: #232B38;
+	width: 40px;
+	text-align: center;
+}
+.status-dropdown-icon .fa {
+	font-size: 20px;
+	margin-top: 4px;
+}
+.status-dropdown-list {
+	position: absolute;
+	top: 35px;
+	right: -1px;
+	padding: 15px;
+	background: #E6EDF3;
+	color: #232B38;
+	width: 150px;
+	display: none;
+}
+.status-dropdown-list-item {
+	padding: 5px;
+	margin-left: -5px;
+	margin-right: -5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.status-dropdown-list-item:hover {
+	background: #C8CED9;
+}
+.search-employee-status-field.active .status-dropdown-list {
+	display: block;
+	z-index: 99;
+}
+.employee-search-form.active .search-employee-field {
+	color: #fff;
+}
+.employee-search-form.active .simple-gray {
+	color: #fff;
+	background: #9DA3B3;
+}
+.employee-search-form.active .page-title {
+	color: #fff;
+}
+.employee-search-form.active .search-employee-status-field {
+	position: relative;
+	width: 150px;
+	padding-right: 30px;
+	border-color: #505663;
+	color: #7F848C;
+}
+.employee-search-form.active .status-dropdown-icon {
+	background: #9DA3B3;
+	color: #fff;
+}
+.company-search-form-container.inactive .page-title {
+	color: #656B74;
+}
+.company-search-form-container.inactive-all .search-company-field {
+	border: 1px solid #505663;
+	color: #777777;
+}
+.company-search-form-container.inactive-all button.simple-gray {
+	background: #565C69;
+	color: #232B38;
+}
+select.search-employee-status-field {
+    padding-right: 10px !important;
+}
+select.search-employee-status-field option {
+    background: #fff;
+    color: #333;
+    padding: 5px;
+    border: none;
+}
+#employerContainer th .fa {
+    margin-left: 10px;
+    margin-right: 0;
+}
+@media(max-width:1280px){
+	.search-employee-field {
+		width: 100px;
+	}
+}

@@ -1,0 +1,25 @@
+﻿
+#container {
+        margin:auto;
+        width:714px;
+    }
+
+@media(max-width:767px){
+  #container {
+    width:300px;
+  }
+}
+
+@media(max-width:990px){
+  #container {
+  
+  }
+}
+
+@media(max-width: 1199px) {
+
+    #container {
+        margin:auto;
+    }
+}
+    
