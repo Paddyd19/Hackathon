@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	   	<title>UNUM ADI - Dashboard</title>
+
+		<!-- Disable Cache -->
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/datepicker.css" rel="stylesheet">
+ 
+		<link href="css/tooltip.css" rel="stylesheet">
+
+		<!--<link href="css/daterangepicker.css" rel="stylesheet">-->
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/dashboard.css" rel="stylesheet">
+		<link href="css/filters.css" rel="stylesheet">
+		<link rel="Stylesheet" type="text/css" href="css/wPaginate.css" />
+		<link href="css/nprogress.css" rel="stylesheet">
+
+		<script src="js/lib/jquery-1.11.0.js"></script>
+		<script src="js/lib/jUtil.js"></script>
+		<script src="js/lib/jquery.placeholder.js"></script>
+		<script src="js/lib/knockout-3.1.0.js"></script>
+		<script src="js/lib/jquery.linq.js"></script>
+		<script src="js/lib/Msg.js"></script>
+		<script src="js/lib/jquery-dateFormat.min.js"></script>
+		<script src="js/lib/QueryString.js"></script>
+		<script src="js/lib/jquery.paging.js"></script>
+		<script src="js/lib/validation.js"></script>
+		<script src="js/lib/nprogress.js"></script>
+	
+		<script src="js/lib/mousetrap.js"></script>
+
+	    <!--[if lt IE 9]><link href="css/ie.css" rel="stylesheet"><![endif]-->
+
+
+		<!--[if lte IE 7]>
+		    <script>
+			    alert("We have detected that you are experiencing some rendering issues with your browser. Follow these steps to resolve the issue:\n" +
+				    "\n1.	Select F12 on your keyboard, another screen will appear"+
+					"\n2.	Set the Browser Mode to the IE8"+
+					"\n3.	Set the Document View to IE8 Standards");
+		    </script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div class="container-full">
+			<div class="row header dex">
+				<div class="pull-left logo"><a id="UnumLogo" href="index.html"><img src="img/logo.png" alt=""></a></div>
+				<div class="pull-left web-title">ADI connect</div>
+				<div class="pull-right header-nav notifications-icon" hidden>
+					<a id="GoTo_ErrorPage" href="index.html" class="link active toggle-notification-list">
+						<i class="fa fa-globe"></i>
+						<div class="system-error-counter" id="systemErrorCounter">4</div>
+					</a>
+					<div class="notification-list">
+						<div class="list-title">Notifications</div>
+						<div class="notification-items" id="notificationItems">
+							<a href="#" class="inactive-item">ID-829372649 - Systematic error<span title="Already marked"></span></a>
+							<a href="#">ID-123456789 - Systematic error<span title="Mark as seen"></span></a>
+							<a href="#">ID-354329872 - Systematic error<span title="Mark as seen"></span></a>
+							<a href="#">ID-663534421 - Systematic error<span title="Mark as seen"></span></a>
+						</div>
+						<div class="see-more-notifications"><a href="#">See more</a></div>
+					</div>
+				</div>
+				<div class="pull-right header-nav"><a id="GoTo_Dashboard" href="index.html" class="link active">Dashboard</a></div>
+				<div class="pull-right header-nav"><a id="GoTo_TemplateSetup" href="template.html" class="link">Template setup</a></div>
+			</div>
+			<div class="row title">
+				<div id="searchTopPanel" class="col-xs-24"> <!-- Add or remove class 'active' or 'error' -->
+					<div class="search-top-panel-container">
+						<div class="page-title dex pull-left">Search results</div>
+						<div id="searchFormPartnerName" class="top-search-name pull-right">
+							<input type="text" name="partnerName" id="partnerNameField" placeholder="Partner Name" data-bind="value: partnerSearchInput, valueUpdate: 'afterkeydown'">
+							<input type="button" class="button-gray" value="Search" data-bind="click: SearchPartnerName" id="searchPartner_BTN">
+						</div>
+						<div id="searchFormCaseName" class="top-search-name pull-right">
+							<input type="text" name="caseNameOrRBCN" id="caseNameField" placeholder="Case Name or RBCN" data-bind="value: caseNameSearchInput, valueUpdate: 'afterkeydown'">
+							<input type="button" class="button-gray" value="Search" data-bind="click: SearchRBCN_CASENAME" id="searchCaseOrRBCN_BTN">
+						</div>
+					</div>
+					<div id="searchErrorMessage" class="col-sm-16 col-sm-offset-4">
+						<div class="xblock-header alert-block-header">
+								<i class="fa fa-exclamation-triangle"></i>Error
+								<i class="fa fa-times pull-right" data-bind="click: closeError"></i>
+						</div> 
+						<div class="alert-block-content xblock-content" data-bind="text: searchError">The case name you entered cannot be found, please check the spelling and try again</div>
+					</div>
+					<div class="search-top-panel-results"> <!-- Add or remove class 'inactive' -->
+						<span id="dashboardSearchResults">
+							<div class="col-sm-14 col-sm-offset-5">
+								<table id="searchResultsTable" class="xtable clicable">
+									<thead>
+										<tr>
+											<th>
+											Case name 
+											<span class="sort-desc">
+												<i id="CASE_ASC" class="fa fa-sort-up" data-bind="click: Search_Sort"></i>
+											</span>
+											</th>
+											<th>
+											RBCN
+											<span class="sort-desc">
+												<i id="RBCN_DESC" class="fa fa-sort-down" data-bind="click: Search_Sort"></i>
+											</span>
+											</th>
+											<th>
+												<div class="pull-left">
+												Partner Name
+												<span class="sort-desc">
+													<i id="PARTNER_DESC" class="fa fa-sort-down" data-bind="click: Search_Sort"></i>
+												</span>
+												</div>
+												<i class="fa fa-times pull-right" data-bind="click: closeSearch"></i>
+												<i class="fa fa-expand pull-right" data-bind="click: toggleSearch"></i>
+												<i class="fa fa-compress pull-right" data-bind="click: toggleSearch"></i>
+											</th>
+										</tr>
+									</thead>
+									<tbody data-bind="foreach: search()">
+										<tr data-bind="attr: { caseid: caseID }, click: GoFromSearch">
+											<td data-bind="html: caseName"></td>
+											<td data-bind="html: rbcn"></td>
+											<td data-bind="html: partnerName"></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="error-pagination">
+									<div class="pagination-info">Showing records <span id="recordsRange" data-bind="html: search_fromTo"></span> of <span id="recordsTotal" data-bind="html: search_totalSearchCases"></span></div>
+									<div class="pagination-links" id="searchpages">
+
+									</div>
+								</div>
+							</div>
+						</span>
+					</div>
+
+				</div>
+				<div class="col-xs-24 page-title dex"><i class="fa fa-tachometer"></i>Active Work Items: <int id="cases" class="NonClickableHeader"></int></div>
+			</div>
+			<div id="content" class="content row">
+				<div id="dashboard" class="col-xs-24" >
+				<table class="dashboard-table">
+					<tr>
+				      <td class="table-column-first">
+						  <div id="columnHeader_ManualSubmissionsColumn" class="col-header dex important inactive">Manual Submissions<span id="ManualSubmissionCount"></span></div>
+						  <span id="ManualSubmissionsColumn">
+
+						  </span>
+					  </td>
+					  <td class="dashboard-table-column">
+						<div id="columnHeader_MappingRequiredColumn" class="col-header dex normal inactive">Mapping Required<span id="MappingRequiredCount"></span></div>
+						  <span id="MappingRequiredColumn">
+
+						  <span>
+					  </td>
+					  <td class="dashboard-table-column">
+						<div id="columnHeader_ValidationErrorsColumn" class="col-header dex normal inactive">Validation Errors<span id="ValidationErrorsCount"></span></div>
+						  <span id="ValidationErrorsColumn">
+
+						  </span>
+					  </td>
+					  <td class="dashboard-table-column">
+						<div id="columnHeader_ReadyToIssueColumn" class="col-header dex happy inactive">Ready to Release<span id="ReadyToIssueCount"></span></div>
+						  <span id="ReadyToIssueColumn">
+
+						  </span>
+					  </td>
+					  <td class="table-column-last">
+						<div id="columnHeader_IssueErrorsColumn" class="col-header dex important inactive">Issue Errors<span id="IssueErrorsCount"></span></div>
+						  <span id="IssueErrorsColumn">
+
+						  </span>
+					  </td>
+				    </tr>
+				</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/APIController.js"></script>
+		<script src="js/lib/jquery.tooltip.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/lib/bootstrap-dialog.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/dashboard.js"></script>
+		<script>
+			$(document).ready( function () { 
+				$('input').placeholder(); 
+				ko.applyBindings(DashboardController());
+			});
+		</script>
+		
+
+		<script src="js/lib/spin.min.js"></script>
+		<script src="js/lib/SpinLoader.js"></script>
+	
+	</body>
+</html>

@@ -90,7 +90,7 @@ body { background: #e7e7e8; color: #3d3d3d; font-family: "ff-dax-wide-web-pro-n4
   .m-buttons-container {
     min-width: 240px;
     color:#fff;
-    border-radius: 5px;
+
     	padding: 5px 10px;
     font-family: "ff-dax-wide-web-pro-n4","ff-dax-wide-web-pro",sans-serif; 
 }
@@ -98,7 +98,7 @@ body { background: #e7e7e8; color: #3d3d3d; font-family: "ff-dax-wide-web-pro-n4
 	width: 100%;
 	background: none;
 	border: 2px solid #fff;
-	font-size: 0.6em;
+	font-size: 0.4em;
 	margin-bottom: 10px;
 	border-radius: 5px;
 	padding: 5px 10px;
