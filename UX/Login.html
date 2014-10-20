@@ -5,8 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
 		<link href="css/buttons.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+        <link href="css/calculator.css" rel="stylesheet">
 		<!--[if lt IE 9]><link href="css/ie.css" rel="stylesheet"><![endif]-->
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 		<link href="img/favicon.png" rel="apple-touch-icon">
@@ -15,74 +18,162 @@
 		<link href="img/favicon.png" rel="apple-touch-icon" sizes="114x114">
 	</head>
 	<body>
-		<div class="header-container">
-			<div class="container">
-				<div class="row">
-					<div id="header" class="col-md-12 hidden-xs">
-						<div class="row">
-							<div id="logo" class="pull-left"><a href="index.html"><img src="img/myUnum2.png" alt="UNUM"></a></div>
-							<div id="page-title" class="pull-left dax">Login</div>
-						</div>
+
+		<div class="lp-container container" id="container">
+			<div class="row">
+				<!-- Header and navigation, for desktop and mobile -->
+				<div id="header" class="col-md-24 hidden-xs">
+					<div class="row">
+						<div id="logo" class="pull-left"><a href="#"><img src="img/myUnum2.png" alt="UNUM"></a></div>
+						<div id="page-title" class="pull-left">Login</div>
+					</div>
+				</div>
+				<div id="header" class="m-header col-md-24 visible-xs">
+					<div id="m-logo">
+						<a href="#" class="m-menu-icon pull-left"><i class="fa fa-bars"></i></a>
+						<table align="center">
+							<tr>
+								<td><a href="index.html"><img src="img/myUnum2.png" alt="UNUM" width="64"></a></td>
+								<td><span id="page-title">Login</span></td>
+							</tr>
+						</table>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="top-container">
-			<div class="container">
-				<div class="top-text dax text-right">
-					<p>My Unum</p>
-					<p>Employee/Employer</p>
-					<p>Login Page.</p>
+			<div class="row lp-top-img m-scr-1 mobile-section-block">
+
+				<div class="top-img-div hidden-xs"></div>
+				<div class="top-img-div-mobile visible-xs">
+					<img src="img/m-top-photo.jpg" alt="Make your future more secure with Unum">
 				</div>
-				<form action="" method="POST" id="topLoginForm">
-					<div class="login-form">
-						<div class="login-form-title">Login</div>
-						<div class="login-error-msg">You must enter a username and password</div>
-						<div class="login-form-login">
-							<input type="text" name="login" placeholder="username">
-							<input type="password" name="password" placeholder="password">
-						</div>
-						<div class="login-forgot-link text-right">
-							<a href="#">Forgot your login details?</a>
-						</div>
-						<div class="login-button text-right">
-							<button type="submit" class="big-primary-button">Sign In</button>
-						</div>
-					</div>
-				</form>
+
+                     <div class="lp-top-txt-2 dex">Login
+					    <div class="lp-buttons-container hidden-xs">
+						    <input type="text" name="login" placeholder="email">
+						    <input type="password" name="password" placeholder="password">
+
+                                <div class="login-forgot-link text-right">
+						    <a href="#">Forgot your login details?</a>
+					    </div>
+					    <div class="lp-buttons-container login-button text-right">
+						    <button type="submit" class="big-primary-button">Sign In</button>
+					    </div>
+                      </div>
+				</div>
+						
+					
+		   
 			</div>
-		</div>
-		
-		<div class="blue-container">
-			<div class="container">
-				
-				<div class="links-set row">
-					<div class="col-xs-3">
-						<div class="links-set-title">Support</div>
-						<a href="#">Knowledge base</a>
+			<div class="mobile-section visible-xs">
+				<div class="m-scr-1 mobile-section-block row button-container">
+					<div class="buttons col-xs-24">
+                          <div class="m-buttons-container">
+                                Login <br />
+                              </div>
+                         <div class="m-buttons-container">
+                                 <input type="text" name="login" placeholder="email"><br /></div>
+                         <div class="m-buttons-container">
+						            <input type="password" name="password" placeholder="password"><br /></div>
+                         <div class="m-buttons-container">
+                                 <a href="#">Forgot your login details?</a><br />
+                              </div>
+						<a href="#" class="small-white-transparent-button text-center section-button" data-section="m-scr-2">Login<i class="fa right-icon fa-chevron-right"></i></a>
+					</div>
+				</div>
+			</div>	
+
+			<!-- Footer -->
+			<div class="row footer dex hidden-xs">
+				<div class="col-sm-22 col-sm-offset-1 footer-top">Any questions, simply call: <br class="visible-xs" /><b>1850 555 1236</b></div>
+				<div class="footer-mid">
+					<div class="col-sm-5 col-sm-offset-1 footer-block">
+						<b>Documents &amp; downloads</b>
+						<a href="#">Offline application forms</a>
+						<a href="#">Bank draft form</a>
+					</div>
+					<div class="footer-separator visible-xs"></div>
+					<div class="col-sm-3 footer-block">
+						<b>Help</b>
 						<a href="#">FAQs</a>
-						<a href="#">Glossary</a>
+						<a href="#">Live chat</a>
+						<a href="#">Call back</a>
 					</div>
-					<div class="col-xs-3">
-						<div class="links-set-title">Features</div>
-						<a href="#">Improved link integration...</a>
-						<a href="#">New features in Hosting</a>
-						<a href="#">ADI launched!</a>
+					<div class="footer-separator visible-xs"></div>
+					<div class="col-sm-4 footer-block">
+						<b>Contact us</b>
+						<a href="#">We're here to help</a>
+						<a href="#">Find a Unum field office</a>
 					</div>
-					<div class="col-xs-3">
-						<div class="links-set-title">Contact</div>
-						<p>1850 555 555</p>
-						<a href="#">Email us</a>
+					<div class="footer-separator visible-xs"></div>
+					<div class="col-sm-4 footer-block">
+						<b>About</b>
+						<a href="#">Learn more about Unum</a>
+						<a href="#">Finance calculators</a>
+					</div>
+					<div class="footer-separator visible-xs"></div>
+				</div>
+				<div class="col-sm-22 col-sm-offset-1 footer-bottom">
+					<div class="copyright visible-xs">&copy; 2014 Unum Group. All rights reserved. Unum is a registered trademark and marketing brand of Unum Group and its insuring subsidiaries<br />NS-200 | Form: AE-1090</div>
+					<ul class="hidden-xs">
+						<li>NS-200</li>
+						<li>Form: AE-1090</li>
+						<li><a href="#">Trademark</a></li>
+						<li><a href="#">Site map</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li class="ff-link"><a href="#">Legal</a></li>
+					</ul>
+					<ul class="visible-xs">
+						<li><a href="#">Legal</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Site map</a></li>
+						<li><a href="#">Trademark</a></li>
+					</ul>
+					<div class="pull-right copyright hidden-xs top-20">&copy; 2014 Unum Group. All rights reserved. Unum is a registered trademark and marketing brand of Unum Group and its insuring subsidiaries</div>
+				</div>
+			</div>
+		</div> <!-- End of the Container -->
+
+		<!-- Hidden mobile navigation -->
+		<div id="mobileNavigation" class="mobile-menu">
+			<nav>
+				<ul>
+					<li class="menu-close"><i class="fa fa-bars"></i></li>
+					<li><a href="#">Learn</a></li>
+					<li><a href="#">Apply</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</nav>
+			<a class="m-menu-logout" href="#">Logout</a>
+		</div>
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<iframe width="540" height="304" frameborder="0" name="wistia_embed" class="wistia_embed" scrolling="no" allowtransparency="true" src="http://fast.wistia.net/embed/iframe/0x25qiihgs?playerColor=81b7db&version=v1&videoHeight=304&videoWidth=540&videoFoam=true"></iframe>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/lib/jquery-1.10.2.min.js"></script>
 	    <!--[if lt IE 9]>
 	    	<script src="js/lib/html5shiv.js"></script>
 	    	<script src="js/lib/respond.min.js"></script>
 	    <![endif]-->
-		<script src="js/lib/jquery.placeholder.js"></script>
+		<script src="js/lib/jquery-ui.min.js"></script>
+		<script src="js/lib/jquery.ui.touch-punch.js"></script>
+		<script src="js/lib/highcharts.js"></script>
+	    <script src="js/lib/jquery.placeholder.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/lib/fastclick.js"></script>
+		<script src="js/lib/jquery.pubsub.js"></script>
+		<script src="js/lib/sxf3qhv.js"></script>
+		<script src="js/lib/bootstrap-datepicker.js"></script>
+		<script src="js/lib/jquery.formparams.min.js"></script>
+		<script src="js/lib/jquery.formatter.min.js"></script>
+		<script src="js/lib/jQuery.dPassword.js"></script>
+		<script src="js/calculator.js"></script>
 		<script src="js/app.js"></script>
 	</body>
+</html>
