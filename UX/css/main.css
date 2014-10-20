@@ -66,8 +66,8 @@ body { background: #e7e7e8; color: #3d3d3d; font-family: "ff-dax-wide-web-pro-n4
 }
 .lp-buttons-container input {
 	width: 100%;
-	background: none;
-	border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
 	font-size: 1.8em;
 	margin-bottom: 10px;
 	border-radius: 5px;
