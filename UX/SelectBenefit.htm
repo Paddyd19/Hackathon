@@ -62,6 +62,11 @@
             &amp;lt;/iframe&amp;gt;
         </noscript>
         <script>
+			function btnClick(url) {
+				window.location = url;
+			}
+		
+		
             (function (w, d, s, l, i) {
                 w[l] = w[l] || []; w[l].push({
                     'gtm.start':
@@ -211,7 +216,7 @@ Your coverage options are outlined below, all prices quotes are after taxes.*
                             </tbody>
                         </table>
                     </div>
-                    <span id="selectBasic" class="big-blue-link pull-right" style="cursor: pointer;">
+                    <span id="selectBasic" class="big-blue-link pull-right" style="cursor: pointer;" onclick="btnClick('Options.html')">
 						<span class="hidden-xs">Select your coverage</span>
 						<span class="visible-xs">Select your coverage</span>
                     </span>
@@ -303,7 +308,7 @@ Your coverage options are outlined below, all prices quotes are after taxes.*
                             </tbody>
                         </table>
                     </div>
-                    <span id="selectBasic" class="big-blue-link pull-right" style="cursor: pointer;">
+                    <span id="selectBasic" class="big-blue-link pull-right" style="cursor: pointer;" onclick="btnClick('Options.html')">
                             <span class="hidden-xs">Select your coverage</span>
                             <span class="visible-xs">Select your coverage</span>
                         </span>
@@ -395,7 +400,7 @@ Your coverage options are outlined below, all prices quotes are after taxes.*
                             </tbody>
                         </table>
                     </div>
-                    <span id="selectBasic" class="big-blue-link pull-right" style="cursor: pointer;">
+                    <span id="selectBasic" class="big-blue-link pull-right" style="cursor: pointer;" onclick="btnClick('Options.html')">
                             <span class="hidden-xs">Select your coverage</span>
                             <span class="visible-xs">Select your coverage</span>
                         </span>
